@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(USE_MOCK_LLM=true python -m pytest -v)",
+      "Bash(USE_MOCK_LLM=true timeout 5 python -m uvicorn app.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(USE_MOCK_LLM=true python -m uvicorn app.main:app --host 127.0.0.1 --port 8000)",
+      "Bash(curl -s -X POST http://localhost:8000/quote/ -H \"Content-Type: application/json\" -d '{\"\"\"\"client_name\"\"\"\":\"\"\"\"Eng. Omar\"\"\"\",\"\"\"\"client_email\"\"\"\":\"\"\"\"omar@client.com\"\"\"\",\"\"\"\"language\"\"\"\":\"\"\"\"en\"\"\"\",\"\"\"\"delivery_terms\"\"\"\":\"\"\"\"4 weeks delivery to Dammam\"\"\"\",\"\"\"\"notes\"\"\"\":\"\"\"\"Include specs sheet\"\"\"\",\"\"\"\"line_items\"\"\"\":[{\"\"\"\"product_name\"\"\"\":\"\"\"\"Streetlight ALR-SL-90W\"\"\"\",\"\"\"\"unit_cost\"\"\"\":500,\"\"\"\"margin_pct\"\"\"\":25,\"\"\"\"qty\"\"\"\":120},{\"\"\"\"product_name\"\"\"\":\"\"\"\"Mounting Bracket MB-200\"\"\"\",\"\"\"\"unit_cost\"\"\"\":50,\"\"\"\"margin_pct\"\"\"\":20,\"\"\"\"qty\"\"\"\":120}]}')",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s -X POST http://localhost:8000/quote/ -H \"Content-Type: application/json\" -d '{\"\"\"\"client_name\"\"\"\":\"\"\"\"م. عمر\"\"\"\",\"\"\"\"client_email\"\"\"\":\"\"\"\"omar@client.com\"\"\"\",\"\"\"\"language\"\"\"\":\"\"\"\"ar\"\"\"\",\"\"\"\"delivery_terms\"\"\"\":\"\"\"\"التسليم خلال 4 أسابيع إلى الدمام\"\"\"\",\"\"\"\"line_items\"\"\"\":[{\"\"\"\"product_name\"\"\"\":\"\"\"\"Streetlight ALR-SL-90W\"\"\"\",\"\"\"\"unit_cost\"\"\"\":500,\"\"\"\"margin_pct\"\"\"\":25,\"\"\"\"qty\"\"\"\":120},{\"\"\"\"product_name\"\"\"\":\"\"\"\"Mounting Bracket MB-200\"\"\"\",\"\"\"\"unit_cost\"\"\"\":50,\"\"\"\"margin_pct\"\"\"\":20,\"\"\"\"qty\"\"\"\":120}]}')",
+      "Bash(curl -s -w \"\\\\nHTTP Status: %{http_code}\\\\n\" -X POST http://localhost:8000/quote/ -H \"Content-Type: application/json\" -d '{\"\"\"\"client_name\"\"\"\":\"\"\"\"Test\"\"\"\",\"\"\"\"client_email\"\"\"\":\"\"\"\"test@test.com\"\"\"\",\"\"\"\"language\"\"\"\":\"\"\"\"en\"\"\"\",\"\"\"\"delivery_terms\"\"\"\":\"\"\"\"asap\"\"\"\",\"\"\"\"line_items\"\"\"\":[]}')"
+    ]
+  }
+}

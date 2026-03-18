@@ -1,0 +1,4 @@
+{
+  "en": "Dear {client_name},\n\nThank you for your inquiry. We are pleased to present our quotation for the requested lighting products.\n\n--- Quotation Details ---\n\n{items_table}\n\nGrand Total: SAR {grand_total}\n\nDelivery Terms: {delivery_terms}\n{notes_section}\nShould you have any questions or require further clarification, please do not hesitate to contact us.\n\nWe look forward to your favorable response.\n\nBest regards,\nAlrouf Lighting Technology\nSales Department\ninfo@alrouf.com",
+  "ar": "السيد/السيدة {client_name} المحترم/ة،\n\nشكراً لاستفساركم. يسرنا أن نقدم لكم عرض الأسعار التالي للمنتجات المطلوبة.\n\n--- تفاصيل عرض الأسعار ---\n\n{items_table}\n\nالإجمالي الكلي: {grand_total} ريال سعودي\n\nشروط التسليم: {delivery_terms}\n{notes_section}\nفي حال وجود أي استفسارات أو الحاجة إلى مزيد من التوضيح، يرجى عدم التردد في التواصل معنا.\n\nنتطلع إلى ردكم الإيجابي.\n\nمع أطيب التحيات،\nشركة الروف لتقنية الإضاءة\nقسم المبيعات\ninfo@alrouf.com"
+}
